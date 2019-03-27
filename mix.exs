@@ -32,7 +32,8 @@ defmodule SlackAPI.MixProject do
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:cowboy, "~> 2.0", only: :test},
       {:plug_cowboy, "~> 2.0", override: true, only: :test},
-      {:mox, "~> 0.5", only: :test}
+      {:mox, "~> 0.5", only: :test},
+      {:bypass, "~> 1.0", only: :test}
     ]
   end
 end

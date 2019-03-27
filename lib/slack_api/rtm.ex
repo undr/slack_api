@@ -61,8 +61,8 @@ defmodule SlackAPI.RTM do
       {:reply, frame, inner_state}       -> {:reply, frame, %{state | state: inner_state}}
       {:close, inner_state}              -> {:close, %{state | state: inner_state}}
       {:close, close_frame, inner_state} -> {:close, close_frame, %{state | state: inner_state}}
-      {:error, {:handler, error}}         -> handle_error(error, state)
-      {:error, _}                         -> {:ok, state}
+      {:error, {:handler, error}}        -> handle_error(error, state)
+      {:error, _}                        -> {:ok, state}
     end
   end
 
@@ -72,8 +72,8 @@ defmodule SlackAPI.RTM do
       {:reply, frame, inner_state}       -> {:reply, frame, %{state | state: inner_state}}
       {:close, inner_state}              -> {:close, %{state | state: inner_state}}
       {:close, close_frame, inner_state} -> {:close, close_frame, %{state | state: inner_state}}
-      {:error, {:handler, error}}         -> handle_error(error, state)
-      {:error, _}                         -> {:ok, state}
+      {:error, {:handler, error}}        -> handle_error(error, state)
+      {:error, _}                        -> {:ok, state}
     end
   end
 

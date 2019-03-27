@@ -41,7 +41,7 @@ defmodule SlackAPI.Web do
     do: "#{url}/api/#{action}"
 
   def post(client, action),
-    do: post(client, action, {:json, ""})
+    do: post(client, action, {:json, nil})
   def post(client, action, {type, params}) do
     headers = headers(client, type)
     body = body(client, type, params)
@@ -67,16 +67,16 @@ defmodule SlackAPI.Web do
   defp body(_, _, nil),
     do: ""
   defp body(_, :json, params),
-    do: params |> normalize_params() |> Poison.encode!()
+    do: params |> Enum.into(%{}) |> Poison.encode!()
   defp body(client, :form, params),
     do: {:form, query(client, params)}
 
-  defp query(_, nil),
-    do: ""
+  defp query(client, nil),
+    do: query(client, [])
   defp query(client, params) do
     params
-    |> normalize_params()
-    |> Map.put(:token, get_token(client))
+    |> Enum.into([])
+    |> Keyword.put(:token, get_token(client))
   end
 
   defp headers(_client, :form),
@@ -92,11 +92,6 @@ defmodule SlackAPI.Web do
   defp authorization(client) do
     {"Authorization", "Bearer #{ get_token(client)}"}
   end
-
-  defp normalize_params(params) when is_list(params),
-    do: Enum.into(params, %{})
-  defp normalize_params(params),
-    do: params
 
   defp default_options do
     [token: Application.get_env(:slack_api, :api_token), url: Application.get_env(:slack_api, :url)]
