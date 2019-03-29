@@ -47,7 +47,7 @@ defmodule SlackAPI.Web.DefMethods do
     Will produce:
 
       def create(client, channel, params \\ %{}) do
-        Web.post(client, "channels.create", %{channel: channel}, [:channel, :validate])
+        Web.post(client, "channels.create", merge(:post, params, %{channel: channel}, [:channel, :validate]))
       end
   """
   defmacro defpost(name, endpoint),
