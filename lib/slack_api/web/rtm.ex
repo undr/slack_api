@@ -1,9 +1,7 @@
 defmodule SlackAPI.Web.RTM do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def connect(client, params \\ %{}),
-    do: Web.get(client, "rtm.connect", params)
-
-  def start(client, params \\ %{}),
-    do: Web.get(client, "rtm.start", params)
+  defget :connect, "rtm.connect", [], ~w[batch_presence_aware presence_sub]a
+  defget :start, "rtm.start", [],
+    ~w[batch_presence_aware presence_sub mpim_aware no_latest no_unreads presence_sub simple_latest]a
 end

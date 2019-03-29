@@ -1,8 +1,5 @@
 defmodule SlackAPI.Web.Bots do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def info(client),
-    do: Web.get(client, "bots.info")
-  def info(client, name),
-    do: Web.get(client, "bots.info", bot: name)
+  defget :info, "bots.info", [], ~w[bot]a
 end

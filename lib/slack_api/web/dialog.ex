@@ -1,6 +1,5 @@
 defmodule SlackAPI.Web.Dialog do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def open(client, dialog, trigger_id),
-    do: Web.post(client, "dialog.open", {:json, %{dialog: dialog, trigger_id: trigger_id}})
+  defpost :open, "dialog.open", ~w[dialog trigger_id]a
 end

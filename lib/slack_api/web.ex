@@ -40,11 +40,9 @@ defmodule SlackAPI.Web do
   def get_url(%__MODULE__{url: url}, action),
     do: "#{url}/api/#{action}"
 
-  def post(client, action),
-    do: post(client, action, {:json, nil})
-  def post(client, action, {type, params}) do
-    headers = headers(client, type)
-    body = body(client, type, params)
+  def post(client, action, params \\ "") do
+    headers = headers(client, :json)
+    body = body(client, params)
 
     client
     |> get_url(action)
@@ -64,20 +62,13 @@ defmodule SlackAPI.Web do
     |> Poison.Parser.parse!(keys: :atoms)
   end
 
-  defp body(_, _, nil),
+  defp body(_, ""),
     do: ""
-  defp body(_, :json, params),
+  defp body(_, params),
     do: params |> Enum.into(%{}) |> Poison.encode!()
-  defp body(client, :form, params),
-    do: {:form, query(client, params)}
 
-  defp query(client, nil),
-    do: query(client, [])
-  defp query(client, params) do
-    params
-    |> Enum.into([])
-    |> Keyword.put(:token, get_token(client))
-  end
+  defp query(client, params),
+    do: params |> Enum.into([]) |> Keyword.put(:token, get_token(client))
 
   defp headers(_client, :form),
     do: [{"Accept", "application/json;charset=utf-8"}]

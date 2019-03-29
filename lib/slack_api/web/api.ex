@@ -1,6 +1,5 @@
 defmodule SlackAPI.Web.API do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def test(client, params \\ %{}),
-    do: Web.post(client, "api.test", {:json, params})
+  defpost :test, "api.test", [], ~w[error foo]a
 end

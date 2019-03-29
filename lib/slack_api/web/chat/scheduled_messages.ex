@@ -1,6 +1,5 @@
 defmodule SlackAPI.Web.Chat.ScheduledMessages do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def all(client, params \\ %{}),
-    do: Web.post(client, "chat.scheduledMessages.list", {:json, params})
+  defpost :all, "chat.scheduledMessages.list", [], ~w[channel cursor latest limit oldest]a
 end

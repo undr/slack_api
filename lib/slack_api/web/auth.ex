@@ -1,12 +1,6 @@
 defmodule SlackAPI.Web.Auth do
-  alias SlackAPI.Web
+  use SlackAPI.Web.DefMethods
 
-  def revoke(client, real \\ true)
-  def revoke(client, false),
-    do: Web.get(client, "auth.revoke", test: "1")
-  def revoke(client, _),
-    do: Web.get(client, "auth.revoke")
-
-  def test(client),
-    do: Web.post(client, "auth.test", {:json, nil})
+  defget :revoke, "auth.revoke", [], ~w[test]a
+  defpost :test, "auth.test"
 end

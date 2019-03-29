@@ -40,7 +40,7 @@ defmodule SlackAPI.WebTest do
         Plug.Conn.resp(conn, 200, ~s<{"ok":true}>)
       end
 
-      assert Web.post(client, "endpoint", {:json, [param1: "val1", param2: "val2"]}) == %{ok: true}
+      assert Web.post(client, "endpoint", [param1: "val1", param2: "val2"]) == %{ok: true}
     end
 
     test "json map params", %{client: client, bypass: bypass} do
@@ -52,27 +52,7 @@ defmodule SlackAPI.WebTest do
         Plug.Conn.resp(conn, 200, ~s<{"ok":true}>)
       end
 
-      assert Web.post(client, "endpoint", {:json, %{param1: "val1", param2: "val2"}}) == %{ok: true}
-    end
-
-    test "form keyword params", %{client: client, bypass: bypass} do
-      Bypass.expect bypass, "POST", "/api/endpoint", fn conn ->
-        {:ok, ~s<token=token&param1=val1&param2=val2>, _} = Plug.Conn.read_body(conn)
-        assert Plug.Conn.get_req_header(conn, "accept") == ["application/json;charset=utf-8"]
-        Plug.Conn.resp(conn, 200, ~s<{"ok":true}>)
-      end
-
-      assert Web.post(client, "endpoint", {:form, [param1: "val1", param2: "val2"]}) == %{ok: true}
-    end
-
-    test "form map params", %{client: client, bypass: bypass} do
-      Bypass.expect bypass, "POST", "/api/endpoint", fn conn ->
-        {:ok, ~s<token=token&param1=val1&param2=val2>, _} = Plug.Conn.read_body(conn)
-        assert Plug.Conn.get_req_header(conn, "accept") == ["application/json;charset=utf-8"]
-        Plug.Conn.resp(conn, 200, ~s<{"ok":true}>)
-      end
-
-      assert Web.post(client, "endpoint", {:form, %{param1: "val1", param2: "val2"}}) == %{ok: true}
+      assert Web.post(client, "endpoint", %{param1: "val1", param2: "val2"}) == %{ok: true}
     end
   end
 
