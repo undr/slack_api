@@ -25,11 +25,17 @@ defmodule SlackAPI.Web do
   def groups,
     do: SlackAPI.Web.Groups
 
+  def im,
+    do: SlackAPI.Web.IM
+
   def oauth,
     do: SlackAPI.Web.Oauth
 
   def rtm,
     do: SlackAPI.Web.RTM
+
+  def users,
+    do: SlackAPI.Web.Users
 
   def new(opts \\ []),
     do: struct(__MODULE__, Keyword.merge(default_options(), opts))
