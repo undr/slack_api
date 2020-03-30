@@ -13,7 +13,7 @@ defmodule SlackAPI.Web.Channels do
   defpost :mark, "channels.mark", ~w[channel ts]a
   defpost :rename, "channels.rename", ~w[channel name]a, ~w[validate]a
   defget :replies, "channels.replies", ~w[channel thread_ts]a
-  defpost :set_purpose, "channels.setPurpose", ~w[channel purpose]a
+  defpost :set_purpose, "channels.setPurpose", ~w[channel purpose]a, ~w[name_tagging]a
   defpost :set_topic, "channels.setTopic", ~w[channel topic]a
   defpost :unarchive, "channels.unarchive", ~w[channel]a
 end

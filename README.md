@@ -96,7 +96,7 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 
 **Supported endpoints:**
 
-- [api.test](https://api.slack.com/methods/rapi.test)
+- [api.test](https://api.slack.com/methods/api.test)
 - [auth.revoke](https://api.slack.com/methods/auth.revoke)
 - [auth.test](https://api.slack.com/methods/auth.test)
 - [bots.info](https://api.slack.com/methods/bots.info)
@@ -108,6 +108,7 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [channels.join](https://api.slack.com/methods/channels.join)
 - [channels.kick](https://api.slack.com/methods/channels.kick)
 - [channels.leave](https://api.slack.com/methods/channels.leave)
+- [channels.list](https://api.slack.com/methods/channels.list)
 - [channels.mark](https://api.slack.com/methods/channels.mark)
 - [channels.rename](https://api.slack.com/methods/channels.rename)
 - [channels.replies](https://api.slack.com/methods/channels.replies)
