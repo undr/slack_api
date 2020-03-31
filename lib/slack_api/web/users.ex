@@ -1,6 +1,9 @@
 defmodule SlackAPI.Web.Users do
   use SlackAPI.Web.DefMethods
 
+  def profile,
+    do: SlackAPI.Web.Users.Profile
+
   defget :conversations, "users.conversations", [], ~w[cursor exclude_archived limit types user]a
   defget :delete_photo, "users.deletePhoto"
   defget :get_presence, "users.getPresence", ~w[user]a

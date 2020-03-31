@@ -43,6 +43,9 @@ defmodule SlackAPI.Web do
   def reactions,
     do: SlackAPI.Web.Reactions
 
+  def reminders,
+    do: SlackAPI.Web.Reminders
+
   def rtm,
     do: SlackAPI.Web.RTM
 

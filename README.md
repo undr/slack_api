@@ -198,6 +198,21 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [pins.list](https://api.slack.com/methods/pins.list)
 - [pins.remove](https://api.slack.com/methods/pins.remove)
 
+**reactions**
+
+- [reactions.add](https://api.slack.com/methods/reactions.add)
+- [reactions.get](https://api.slack.com/methods/reactions.get)
+- [reactions.list](https://api.slack.com/methods/reactions.list)
+- [reactions.remove](https://api.slack.com/methods/reactions.remove)
+
+**reminders**
+
+- [reminders.add](https://api.slack.com/methods/reminders.add)
+- [reminders.complete](https://api.slack.com/methods/reminders.complete)
+- [reminders.delete](https://api.slack.com/methods/reminders.delete)
+- [reminders.info](https://api.slack.com/methods/reminders.info)
+- [reminders.list](https://api.slack.com/methods/reminders.list)
+
 **rtm**
 
 - [rtm.connect](https://api.slack.com/methods/rtm.connect)
@@ -215,6 +230,8 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [users.setActive](https://api.slack.com/methods/users.setActive)
 - [users.setPhoto](https://api.slack.com/methods/users.setPhoto)
 - [users.setPresence](https://api.slack.com/methods/users.setPresence)
+- [users.profile.get](https://api.slack.com/methods/users.profile.get)
+- [users.profile.set](https://api.slack.com/methods/users.profile.set)
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
