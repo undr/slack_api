@@ -37,6 +37,9 @@ defmodule SlackAPI.Web do
   def oauth,
     do: SlackAPI.Web.Oauth
 
+  def pins,
+    do: SlackAPI.Web.Pins
+
   def rtm,
     do: SlackAPI.Web.RTM
 
