@@ -11,6 +11,10 @@ defmodule SlackAPI.Web.ChatTest do
     {:ok, bypass: bypass, client: client}
   end
 
+  test "scheduled_messages" do
+    assert Chat.scheduled_messages() == Chat.ScheduledMessages
+  end
+
   describe "delete" do
     test "without params", %{client: client, bypass: bypass} do
       Bypass.expect bypass, "POST", "/api/chat.delete", fn conn ->
