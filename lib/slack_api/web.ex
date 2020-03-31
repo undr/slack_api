@@ -4,14 +4,14 @@ defmodule SlackAPI.Web do
   def api,
     do: SlackAPI.Web.API
 
+  def apps,
+    do: SlackAPI.Web.Apps
+
   def auth,
     do: SlackAPI.Web.Auth
 
   def bots,
     do: SlackAPI.Web.Bots
-
-  def channels,
-    do: SlackAPI.Web.Channels
 
   def chat,
     do: SlackAPI.Web.Chat
@@ -22,11 +22,17 @@ defmodule SlackAPI.Web do
   def dialog,
     do: SlackAPI.Web.Dialog
 
-  def groups,
-    do: SlackAPI.Web.Groups
+  def dnd,
+    do: SlackAPI.Web.DnD
 
-  def im,
-    do: SlackAPI.Web.IM
+  def emoji,
+    do: SlackAPI.Web.Emoji
+
+  def files,
+    do: SlackAPI.Web.Files
+
+  def migration,
+    do: SlackAPI.Web.Migration
 
   def oauth,
     do: SlackAPI.Web.Oauth
