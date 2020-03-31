@@ -40,6 +40,9 @@ defmodule SlackAPI.Web do
   def pins,
     do: SlackAPI.Web.Pins
 
+  def reactions,
+    do: SlackAPI.Web.Reactions
+
   def rtm,
     do: SlackAPI.Web.RTM
 
