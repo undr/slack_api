@@ -94,12 +94,33 @@ SlackAPI.Web.channels().test(client, "channel-name", validate: true)
 SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 ```
 
-**Supported endpoints:**
+#### Supported endpoints:
+
+**api**
 
 - [api.test](https://api.slack.com/methods/api.test)
+
+**apps**
+
+- [apps.uninstall](https://api.slack.com/methods/apps.uninstall)
+- [apps.permissions.info](https://api.slack.com/methods/apps.permissions.info)
+- [apps.permissions.request](https://api.slack.com/methods/apps.permissions.request)
+- [apps.permissions.resources.list](https://api.slack.com/methods/apps.permissions.resources.list)
+- [apps.permissions.scopes.list](https://api.slack.com/methods/apps.permissions.scopes.list)
+- [apps.permissions.users.list](https://api.slack.com/methods/apps.permissions.users.list)
+- [apps.permissions.users.request](https://api.slack.com/methods/apps.permissions.users.request)
+
+**auth**
+
 - [auth.revoke](https://api.slack.com/methods/auth.revoke)
 - [auth.test](https://api.slack.com/methods/auth.test)
+
+**bots**
+
 - [bots.info](https://api.slack.com/methods/bots.info)
+
+**chat**
+
 - [chat.delete](https://api.slack.com/methods/chat.delete)
 - [chat.deleteScheduledMessage](https://api.slack.com/methods/chat.deleteScheduledMessage)
 - [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)
@@ -109,6 +130,9 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [chat.scheduleMessage](https://api.slack.com/methods/chat.scheduleMessage)
 - [chat.unfurl](https://api.slack.com/methods/chat.unfurl)
 - [chat.update](https://api.slack.com/methods/chat.update)
+
+**conversations**
+
 - [conversations.archive](https://api.slack.com/methods/conversations.archive)
 - [conversations.close](https://api.slack.com/methods/conversations.close)
 - [conversations.create](https://api.slack.com/methods/conversations.create)
@@ -126,13 +150,25 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [conversations.setPurpose](https://api.slack.com/methods/conversations.setPurpose)
 - [conversations.setTopic](https://api.slack.com/methods/conversations.setTopic)
 - [conversations.unarchive](https://api.slack.com/methods/conversations.unarchive)
+
+**dialog**
+
 - [dialog.open](https://api.slack.com/methods/dialog.open)
+
+**dnd**
+
 - [dnd.endDnd](https://api.slack.com/methods/dnd.endDnd)
 - [dnd.endSnooze](https://api.slack.com/methods/dnd.endSnooze)
 - [dnd.info](https://api.slack.com/methods/dnd.info)
 - [dnd.setSnooze](https://api.slack.com/methods/dnd.setSnooze)
 - [dnd.teamInfo](https://api.slack.com/methods/dnd.teamInfo)
+
+**emoji**
+
 - [emoji.list](https://api.slack.com/methods/emoji.list)
+
+**files**
+
 - [files.delete](https://api.slack.com/methods/files.delete)
 - [files.info](https://api.slack.com/methods/files.info)
 - [files.list](https://api.slack.com/methods/files.list)
@@ -146,10 +182,29 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [files.remote.remove](https://api.slack.com/methods/files.remote.remove)
 - [files.remote.share](https://api.slack.com/methods/files.remote.share)
 - [files.remote.update](https://api.slack.com/methods/files.remote.update)
+
+**migration**
+
+- [migration.exchange](https://api.slack.com/methods/migration.exchange)
+
+**oauth**
+
 - [oauth.access](https://api.slack.com/methods/oauth.access)
 - [oauth.token](https://api.slack.com/methods/oauth.token)
+
+**pins**
+
+- [pins.add](https://api.slack.com/methods/pins.add)
+- [pins.list](https://api.slack.com/methods/pins.list)
+- [pins.remove](https://api.slack.com/methods/pins.remove)
+
+**rtm**
+
 - [rtm.connect](https://api.slack.com/methods/rtm.connect)
 - [rtm.start](https://api.slack.com/methods/rtm.start)
+
+**users**
+
 - [users.conversations](https://api.slack.com/methods/users.conversations)
 - [users.deletePhoto](https://api.slack.com/methods/users.deletePhoto)
 - [users.getPresence](https://api.slack.com/methods/users.getPresence)
