@@ -257,6 +257,62 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [users.profile.get](https://api.slack.com/methods/users.profile.get)
 - [users.profile.set](https://api.slack.com/methods/users.profile.set)
 
+
+#### To Do:
+
+**admin.apps**
+
+- [admin.apps.approve](https://api.slack.com/methods/admin.apps.approve)
+- [admin.apps.restrict](https://api.slack.com/methods/admin.apps.restrict)
+- [admin.apps.approved.list](https://api.slack.com/methods/admin.apps.approved.list)
+- [admin.apps.requests.list](https://api.slack.com/methods/admin.apps.requests.list)
+- [admin.apps.restricted.list](https://api.slack.com/methods/admin.apps.restricted.list)
+
+**admin.conversations**
+
+- [admin.conversations.setTeams](https://api.slack.com/methods/admin.conversations.setTeams)
+
+**admin.emoji**
+
+- [admin.emoji.add](https://api.slack.com/methods/admin.emoji.add)
+- [admin.emoji.addAlias](https://api.slack.com/methods/admin.emoji.addAlias)
+- [admin.emoji.list](https://api.slack.com/methods/admin.emoji.list)
+- [admin.emoji.remove](https://api.slack.com/methods/admin.emoji.remove)
+- [admin.emoji.rename](https://api.slack.com/methods/admin.emoji.rename)
+
+**admin.inviteRequests**
+
+- [admin.inviteRequests.approve](https://api.slack.com/methods/admin.inviteRequests.approve)
+- [admin.inviteRequests.deny](https://api.slack.com/methods/admin.inviteRequests.deny)
+- [admin.inviteRequests.list](https://api.slack.com/methods/admin.inviteRequests.list)
+- [admin.inviteRequests.approved.list](https://api.slack.com/methods/admin.inviteRequests.approved.list)
+- [admin.inviteRequests.denied.list](https://api.slack.com/methods/admin.inviteRequests.denied.list)
+
+**admin.teams**
+
+- [admin.teams.create](https://api.slack.com/methods/admin.teams.create)
+- [admin.teams.list](https://api.slack.com/methods/admin.teams.list)
+- [admin.teams.admins.list](https://api.slack.com/methods/admin.teams.admins.list)
+- [admin.teams.owners.list](https://api.slack.com/methods/admin.teams.owners.list)
+- [admin.teams.settings.info](https://api.slack.com/methods/admin.teams.settings.info)
+- [admin.teams.settings.setDefaultChannels](https://api.slack.com/methods/admin.teams.settings.setDefaultChannels)
+- [admin.teams.settings.setDescription](https://api.slack.com/methods/admin.teams.settings.setDescription)
+- [admin.teams.settings.setDiscoverability](https://api.slack.com/methods/admin.teams.settings.setDiscoverability)
+- [admin.teams.settings.setIcon](https://api.slack.com/methods/admin.teams.settings.setIcon)
+- [admin.teams.settings.setName](https://api.slack.com/methods/admin.teams.settings.setName)
+
+**admin.users**
+
+- [admin.users.assign](https://api.slack.com/methods/admin.users.assign)
+- [admin.users.invite](https://api.slack.com/methods/admin.users.invite)
+- [admin.users.list](https://api.slack.com/methods/admin.users.list)
+- [admin.users.remove](https://api.slack.com/methods/admin.users.remove)
+- [admin.users.setAdmin](https://api.slack.com/methods/admin.users.setAdmin)
+- [admin.users.setExpiration](https://api.slack.com/methods/admin.users.setExpiration)
+- [admin.users.setOwner](https://api.slack.com/methods/admin.users.setOwner)
+- [admin.users.setRegular](https://api.slack.com/methods/admin.users.setRegular)
+- [admin.users.session.reset](https://api.slack.com/methods/admin.users.session.reset)
+
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/slack_api](https://hexdocs.pm/slack_api).
