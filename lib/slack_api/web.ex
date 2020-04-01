@@ -52,6 +52,9 @@ defmodule SlackAPI.Web do
   def search,
     do: SlackAPI.Web.Search
 
+  def stars,
+    do: SlackAPI.Web.Stars
+
   def users,
     do: SlackAPI.Web.Users
 
