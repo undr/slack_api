@@ -55,6 +55,12 @@ defmodule SlackAPI.Web do
   def stars,
     do: SlackAPI.Web.Stars
 
+  def team,
+    do: SlackAPI.Web.Team
+
+  def usergroups,
+    do: SlackAPI.Web.Usergroups
+
   def users,
     do: SlackAPI.Web.Users
 

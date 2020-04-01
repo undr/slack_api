@@ -224,6 +224,24 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [search.files](https://api.slack.com/methods/search.files)
 - [search.messages](https://api.slack.com/methods/search.messages)
 
+**team**
+
+- [team.accessLogs](https://api.slack.com/methods/team.accessLogs)
+- [team.billableInfo](https://api.slack.com/methods/team.billableInfo)
+- [team.info](https://api.slack.com/methods/team.info)
+- [team.integrationLogs](https://api.slack.com/methods/team.integrationLogs)
+- [team.profile.get](https://api.slack.com/methods/team.profile.get)
+
+**usergroups**
+
+- [usergroups.create](https://api.slack.com/methods/usergroups.create)
+- [usergroups.disable](https://api.slack.com/methods/usergroups.disable)
+- [usergroups.enable](https://api.slack.com/methods/usergroups.enable)
+- [usergroups.list](https://api.slack.com/methods/usergroups.list)
+- [usergroups.update](https://api.slack.com/methods/usergroups.update)
+- [usergroups.users.list](https://api.slack.com/methods/usergroups.users.list)
+- [usergroups.users.update](https://api.slack.com/methods/usergroups.users.update)
+
 **users**
 
 - [users.conversations](https://api.slack.com/methods/users.conversations)
