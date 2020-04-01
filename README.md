@@ -218,6 +218,12 @@ SlackAPI.Web.channels().create(client, "channel-name", %{validate: true})
 - [rtm.connect](https://api.slack.com/methods/rtm.connect)
 - [rtm.start](https://api.slack.com/methods/rtm.start)
 
+**search**
+
+- [search.all](https://api.slack.com/methods/search.all)
+- [search.files](https://api.slack.com/methods/search.files)
+- [search.messages](https://api.slack.com/methods/search.messages)
+
 **users**
 
 - [users.conversations](https://api.slack.com/methods/users.conversations)

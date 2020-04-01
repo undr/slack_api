@@ -49,6 +49,9 @@ defmodule SlackAPI.Web do
   def rtm,
     do: SlackAPI.Web.RTM
 
+  def search,
+    do: SlackAPI.Web.Search
+
   def users,
     do: SlackAPI.Web.Users
 
